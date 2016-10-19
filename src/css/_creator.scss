@@ -1,0 +1,86 @@
+/* =============================================================================
+ * Podstrona: 'Kreator'
+ * ========================================================================== */
+
+nav {
+  float: right;
+  width: 220px;
+}
+div.main {
+  @media screen and (min-width: $l-width) {
+    margin: 0 240px 0 0;
+  }
+}
+
+
+/* =============================================================================
+ * Podglad avatara
+ * ========================================================================== */
+
+.avatar-preview {
+  @include shadow(5);
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  overflow: hidden;
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 200px;
+  }
+}
+
+
+/* =============================================================================
+ * Wybor ksztaltu
+ * ========================================================================== */
+
+.part-pickers {
+  display: none;
+  &.active {
+    display: block;
+  }
+}
+
+.style-picker {
+  margin-bottom: 0.5em;
+  padding: 0.25em;
+  text-align: center;
+  overflow-x: auto;
+  white-space: nowrap;
+  button {
+    width: 50px;
+    height: 50px;
+    margin: 0 0.25em;
+    background: rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+    outline: none;
+    overflow: hidden;
+    img {
+      width: 50px;
+      height: 50px;
+    }
+    &:hover,
+      &:focus {
+      outline: 2px solid lighten($brand-color, 20%);
+    }
+    &.active {
+      outline: 2px solid $brand-color2;
+    }
+  }
+}
+
+
+/* =============================================================================
+ * Wybor koloru
+ * ========================================================================== */
+
+.color-picker {
+  width: 100%;
+  padding: 1em;
+  text-align: center;
+  cursor: pointer;
+}

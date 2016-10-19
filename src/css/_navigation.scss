@@ -1,0 +1,45 @@
+/* =============================================================================
+ * Kreator: Nawigacja
+ * ========================================================================== */
+
+nav {
+  @include shadow(1);
+  position: fixed;
+  z-index: 3;
+  top: ($navbar-height);
+  right: -230px;
+  bottom: 0;
+  padding: 0.5em 0;
+  background: $brand-color;
+  overflow-y: auto;
+  transition: 0.2s;
+  a {
+    display: block;
+    padding: 1em 2em;
+    background: transparent url('../img/creator-nav-bg.png') no-repeat 0.75em center;
+    color: $color;
+    transition: none;
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.05);
+      color: $color;
+    }
+    &.active {
+      background-color: rgba(0, 0, 0, 0.3);
+      background-image: url('../img/creator-nav-bg2.png');
+    }
+    @media screen and (min-width: $l-width) {
+      &.active {
+        background-color: $brand-color;
+      }
+    }
+  }
+  &.active {
+    right: 0;
+  }
+  @media screen and (min-width: $l-width) {
+    @include radius;
+    position: static;margin-bottom: $l-margin;
+    background: #0a0a0a;
+    background: rgba(0, 0, 0, 0.8);
+  }
+}

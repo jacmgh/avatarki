@@ -1,0 +1,49 @@
+/* =============================================================================
+ * Stopka
+ * ========================================================================== */
+
+footer {
+  clear: both;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.5);
+  color: $color2;
+  @media screen and (min-width: $l-width) {
+    padding: 1em !important;
+    text-align: right;
+  }
+}
+
+.footer-nav {
+  margin-bottom: 0.25em;
+  color: $bg-color2;
+  @media screen and (min-width: $l-width) {
+    float: left;
+  }
+}
+
+
+/* =============================================================================
+ * Informacja o cookies
+ * ========================================================================== */
+
+#cookies {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: $m-padding;
+  border: 1px solid #222;
+  border-width: 1px 0;
+  text-align: center;
+  background: #111;
+  background: rgba(17, 17, 17, 0.9);
+  color: $color;
+  button {
+    display: block;
+    margin: 1em auto 0;
+    @media (min-width: $l-width) {
+      display: inline-block;
+      margin: 0 0 0 1em;
+    }
+  }
+}

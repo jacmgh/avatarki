@@ -1,0 +1,43 @@
+/* =============================================================================
+ * Buttony
+ * ========================================================================== */
+
+@mixin btn() {
+  @include radius;
+  display: inline-block;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+[class*=btn] {
+  cursor: pointer;
+}
+
+.btn {
+  @include btn();
+  @include shadow(3);
+  padding: 0.75em 1.25em;
+  background: $brand-color;
+  color: $color;
+  transition: 0.2s;
+  &:hover {
+    background: lighten($brand-color, 10%);
+    color: $color;
+  }
+}
+
+.btn-flat {
+  @include btn();
+  margin: 2em 0 0 1.25em;
+  padding: 0;
+  white-space: nowrap;
+  background: transparent;
+  color: darken($brand-color, 10%);
+  &:hover {
+    color: $brand-color;
+  }
+}
+
+.l-btn {
+  font-size: 1.5em;
+}

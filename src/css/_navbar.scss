@@ -1,0 +1,118 @@
+/* =============================================================================
+ * Navbar
+ * ========================================================================== */
+
+.navbar {
+  position: fixed;
+  z-index: 5;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: $navbar-height;
+  background: $brand-color-alpha;
+  box-shadow: 0 2px 4px 2px rgba(0, 0, 0, 0.3);
+}
+
+
+/* =============================================================================
+ * Logo
+ * ========================================================================== */
+
+.logo {
+  font-weight: 500;
+  font-size: 2em;
+  color: $color;
+  span {
+    font-weight: 500;
+    font-size: 0.5em;
+    opacity: 0.5;
+  }
+  &:hover {
+    color: $color;
+  }
+}
+
+
+/* =============================================================================
+ * Nawigacja
+ * ========================================================================== */
+
+.navbar-navigation {
+  float: right;
+  button {
+    margin-left: 0.5em;
+    vertical-align: top;
+  }
+}
+
+
+/* =============================================================================
+ * Hamburger button
+ * ========================================================================== */
+
+.btn-menu {
+  width: 32px;
+  height: 32px;
+  /*padding: 5px;*/
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  &:focus {
+    outline: none;
+  }
+  span {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 5px;
+    margin: 4px 0;
+    border-radius: 2px;
+    background: $color;
+    transition: 0.1s;
+  }
+  &.active {
+    span {
+      &:nth-child(1) {
+        top: 9px;
+        transform: rotate(45deg);
+      }
+      &:nth-child(2) {
+        opacity: 0;
+      }
+      &:nth-child(3) {
+        top: -9px;
+        transform: rotate(-45deg);
+      }
+    }
+  }
+  @media (min-width: $l-width) {
+    display: none;
+  }
+}
+
+
+/* =============================================================================
+ * Button 'Pomoc'
+ * ========================================================================== */
+
+.btn-help {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 2em;
+  background: rgba(255, 255, 255, 0.3);
+  color: $color;
+  color: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  transition: 0.2s;
+  &:hover {
+    background: $color;
+    color: $brand-color;
+  }
+  @media screen and (min-width: $l-width) {
+    position: static;
+    float: right;
+  }
+}
